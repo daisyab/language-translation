@@ -1,0 +1,16 @@
+<suite name="TestNG Test Suite">
+	<test name="Credentials">
+		<classes> 
+		    <class name="home_page_features.Login"/>
+		    <class name="home_page_features.Logout"/>
+		    <class name="home_page_features.Signup"/>
+		</classes>
+	</test>
+	
+	<test name="Regression">
+	    <packages>
+	        <package name="post_features"/>
+	    </packages>  
+	   
+	</test>
+</suite>
