@@ -7,10 +7,10 @@
 package home_page_features;
 
 import org.junit.Assert;
-import org.junit.Test;
 import org.openqa.selenium.By;
+import org.testng.annotations.Test;
 
-public class EditProfileSettings extends common.CommonCode {
+public class EditProfile extends common.CommonCode {
 
 	private String expectedTitle; 
 	

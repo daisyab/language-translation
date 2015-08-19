@@ -7,8 +7,8 @@
 package home_page_features;
 
 import org.junit.Assert;
-import org.junit.Test;
 import org.openqa.selenium.By;
+import org.testng.annotations.Test;
 
 public class ImportantDetails extends common.CommonCode {
 

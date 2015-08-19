@@ -14,6 +14,8 @@ public class Constants {
 	
 	public static final String defaultUsername = "admin";
 	
+	public static final String dbUser = "myuser";
+	
 	public static final String defaultPassword = "mypassword";
 	
 	public static final String welcomeButton = "html/body/div[1]/div/div/div/div[2]/div/h4/a[1]/font";

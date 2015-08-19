@@ -7,11 +7,13 @@
 package post_features;
 
 import org.junit.Assert;
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
 
-public class CancelAddPost extends common.CommonCode {
+import common.DataProviderCommonCode;
+
+public class CancelAddPost extends DataProviderCommonCode {
 	private String expectedTitle; 
 
 	@Test

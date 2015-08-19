@@ -6,14 +6,14 @@
 
 package post_features;
 
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
 
-import common.CommonCode;
+import common.DataProviderCommonCode;
 
-public class ViewPost extends CommonCode {
+public class ViewPost extends DataProviderCommonCode {
 		
 	String expectedTitle;
 		

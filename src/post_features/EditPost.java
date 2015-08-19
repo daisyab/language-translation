@@ -7,13 +7,13 @@
 package post_features;
 
 import org.junit.Assert;
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
-import common.CommonCode;
+import org.testng.annotations.Test;
+import common.DataProviderCommonCode;
 
-public class EditPost extends CommonCode {
+public class EditPost extends DataProviderCommonCode {
 	private String expectedTitle; 
 
 	@Test

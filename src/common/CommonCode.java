@@ -7,13 +7,12 @@
 package common;
 
 import java.util.concurrent.TimeUnit;
-import org.junit.After;
+
 import org.junit.Assert;
-import org.junit.Before;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
 public class CommonCode {
 	private String expectedTitle; 
@@ -21,7 +20,7 @@ public class CommonCode {
 	protected static String baseURL; 
 	protected static WebDriver driver;		
 
-	@Before
+	@BeforeMethod
 	public void start() {
 		baseURL = utilities.Constants.baseURL;			
 		driver = new FirefoxDriver();
@@ -31,21 +30,10 @@ public class CommonCode {
 		driver.get(baseURL);
 		driver.manage().window().maximize();
 		String actualTitle = driver.getTitle();
-		Assert.assertEquals(expectedTitle, actualTitle);
-		
-		WebElement username = driver.findElement(By.name("username"));
-		username.sendKeys(utilities.Constants.defaultUsername);
-		WebElement password = driver.findElement(By.name("password"));
-		password.sendKeys(utilities.Constants.defaultPassword);		
-		WebElement submit = driver.findElement(By.name(utilities.Constants.sumbitButton));
-		submit.click();
-		
-		//wait for load page to get title
-		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);		
-		Assert.assertEquals("Dashboard", driver.getTitle());
+		Assert.assertEquals(expectedTitle, actualTitle);		
 	}
 	
-	@After
+	@AfterMethod
 	public void destroy() {
 		driver.close();
 	}

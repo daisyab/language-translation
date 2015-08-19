@@ -7,10 +7,10 @@
 package home_page_features;
 
 import java.util.List;
-
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
+
 import common.CommonCode;
 
 public class Home_Page_Malaria extends CommonCode {
@@ -28,10 +28,6 @@ public class Home_Page_Malaria extends CommonCode {
 		for(int i = 0; i < links.size(); i++){
 			driver.navigate().to(all_links[i]);
 			Thread.sleep(2000);
-		}
-		
-		
-	
-	}
-	
+		}	
+	}	
 }
