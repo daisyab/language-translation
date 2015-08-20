@@ -6,6 +6,7 @@
 
 package post_features;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
@@ -15,7 +16,7 @@ import common.DataProviderCommonCode;
 
 public class ViewPost extends DataProviderCommonCode {
 		
-	String expectedTitle;
+	private String expectedURL;
 		
 	@Test
 	public void viewpost() {
@@ -24,6 +25,10 @@ public class ViewPost extends DataProviderCommonCode {
 		try {
 			WebElement viewButton = driver.findElement(By.linkText("View"));
 			viewButton.click();
+			WebElement list = driver.findElement(By.linkText("Back to Post List"));
+			list.click();
+			expectedURL = utilities.Constants.list_of_posts;
+			Assert.assertEquals(expectedURL, driver.getCurrentUrl());
 			}
 			catch(NoSuchElementException e) {
 				System.out.println("No such element: View");

@@ -10,10 +10,9 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
+import common.DataProviderCommonCode;
 
-import common.CommonCode;
-
-public class Home_Page_Malaria extends CommonCode {
+public class Home_Page_Malaria extends DataProviderCommonCode {
 		
 	//tests all the links in the homepage
 	@Test

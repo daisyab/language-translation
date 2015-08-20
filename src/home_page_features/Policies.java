@@ -7,16 +7,18 @@
 package home_page_features;
 
 import org.junit.Assert;
-import org.junit.Test;
 import org.openqa.selenium.By;
+import org.testng.annotations.Test;
 
-public class Policies extends common.CommonCode {
+import common.DataProviderCommonCode;
+
+public class Policies extends DataProviderCommonCode {
 
 	@Test
-	public void PoliciesTest() {
+	public void policiesTest() {
 		
 		//policies
-		driver.findElement(By.xpath("html/body/div[3]/div/font/a[2]")).click();
+		driver.findElement(By.cssSelector("a[href='/policies/']")).click();
 		String actualURL = driver.getCurrentUrl();
 		Assert.assertEquals(baseURL + "/policies/", actualURL);
 	}

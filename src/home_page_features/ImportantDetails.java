@@ -9,17 +9,16 @@ package home_page_features;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
+import common.DataProviderCommonCode;
 
-public class ImportantDetails extends common.CommonCode {
+public class ImportantDetails extends DataProviderCommonCode {
 
 	@Test
-	public void ImportantDetailsTest() {
+	public void importantDetailsTest() {
 
 		//important details
-		driver.findElement(By.xpath("html/body/div[3]/div/font/a[3]")).click();
+		driver.findElement(By.cssSelector("a[href='/details/']")).click();
 		String actualURL= driver.getCurrentUrl();
 		Assert.assertEquals(baseURL + "/details/", actualURL);
 	}
-
 }
-

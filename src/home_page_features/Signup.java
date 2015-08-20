@@ -4,32 +4,19 @@
  * @author daisy
  */
 
-
 package home_page_features;
-
-import java.util.concurrent.TimeUnit;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import common.CommonCode;
 
-public class Signup {
+public class Signup extends CommonCode{
+	
 	private String expectedTitle;
-	private WebDriver driver;
-
-	@BeforeMethod
-	public void beforeMethod() {		  	  
-		driver = new FirefoxDriver();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.get(utilities.Constants.baseURL);
-		driver.manage().window().maximize();
-	}
 		
 	@Test(dataProvider = "create")
 	public void signup(String gender, String username, String email, String firstname,
@@ -79,8 +66,7 @@ public class Signup {
 				utilities.Constants.accountDataSheetName);
 		
 		Object[][] cellData = utilities.ExcelReader.read(connect);
-		return cellData;
-		
+		return cellData;	
 	}
 	
 	@AfterMethod

@@ -17,7 +17,7 @@ public class Logout extends DataProviderCommonCode {
 	@Test
 	public void logout() {
 		
-		driver.findElement(By.xpath("html/body/div[1]/div/div/div/div[2]/div/h4/a[2]/font")).click();
+		driver.findElement(By.xpath("//font[contains(text(),'LogOut')]")).click();
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);		
 
 		String actualTitle = driver.getTitle();

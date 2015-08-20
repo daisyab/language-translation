@@ -9,18 +9,16 @@ package home_page_features;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
+import common.DataProviderCommonCode;
 
-public class Help extends common.CommonCode {
+public class Help extends DataProviderCommonCode {
 
 	@Test
-	public void HelpTest() {
+	public void helpTest() {
 		
 		//help
-		driver.findElement(By.xpath("html/body/div[3]/div/font/a[4]")).click();
+		driver.findElement(By.cssSelector("a[href='/helpPC/']")).click();
 		String actualURL = driver.getCurrentUrl();
 		Assert.assertEquals(baseURL + "/helpPC/", actualURL);
 	}
-
 }
-
-

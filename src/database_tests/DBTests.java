@@ -47,7 +47,7 @@ public class DBTests extends CommonDBTests {
 			Assert.assertTrue("value updated", result == 1);			
 	}
 	
-	//@Test
+	@Test
 	public void delete_operations() throws SQLException {
 		int result = statement.executeUpdate("drop table dummy;");
 		Assert.assertTrue("table created", result == 0);

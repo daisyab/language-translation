@@ -10,11 +10,11 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
-
 import common.DataProviderCommonCode;
 
 public class CancelAddPost extends DataProviderCommonCode {
-	private String expectedTitle; 
+	
+	private String expectedURL; 
 
 	@Test
 	public void canceladdpost() {
@@ -25,5 +25,7 @@ public class CancelAddPost extends DataProviderCommonCode {
 		addPost.click();	
 		WebElement cancel = driver.findElement(By.linkText("Cancel"));
 		cancel.click();
+		expectedURL = utilities.Constants.list_of_posts;
+		Assert.assertEquals(expectedURL, driver.getCurrentUrl());
 	}		
 }
