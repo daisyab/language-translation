@@ -26,12 +26,11 @@ public class EditProfile extends DataProviderCommonCode {
 		Assert.assertTrue("Expected value is not the same as the actual value.",
 				expectedTitle.equals(actualTitle));
 		//click on Welcome
-		driver.findElement(By.xpath
-				("html/body/div[1]/div/div/div/div[2]/div/h4/a[1]/font")).click();
+		WebElement welcomeButton = driver.findElement(By.xpath(utilities.Constants.welcomeButton));
+		welcomeButton.click();
 		          
 		//click on EditProfile
-		driver.findElement(By.xpath
-				("html/body/div[2]/center[2]/button[1]")).click();
+		driver.findElement(By.xpath("//button[contains(text(), 'Edit Profile')]")).click();
 		
 		WebElement first_name = driver.findElement(By.name("first_name"));
 		first_name.clear();
