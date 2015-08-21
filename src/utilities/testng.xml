@@ -7,10 +7,31 @@
 		</classes>
 	</test>
 	
+	<test name="HomePageTests">
+	    <classes> 
+		    <class name="home_page_features.AboutPeaceCorps"/>
+		    <class name="home_page_features.Policies"/>
+		    <class name="home_page_features.ImportantDetails"/>
+		    <class name="home_page_features.Help"/>
+		    <class name="home_page_features.Home_Page_Malaria"/>
+		    <class name="home_page_features.EditProfile"/>
+		</classes>	    
+	</test>
+	
 	<test name="Regression">
-	    <packages>
-	        <package name="post_features"/>
-	    </packages>  
-	   
+	    <classes>
+	        <class name="post_features.AddPost"/>
+	        <class name="post_features.CancelAddPost"/>
+	        <class name="post_features.DeletePost"/>
+	        <class name="post_features.EditPost"/>
+	        <class name="post_features.ViewPost"/>
+	    </classes>	   
+	</test>
+	
+	<test name="ChangePass">
+	    <classes> 
+		    <class name="home_page_features.ChangePassword"/>
+		</classes>
+	    
 	</test>
 </suite>
