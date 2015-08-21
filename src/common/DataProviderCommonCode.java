@@ -1,5 +1,7 @@
 /**
- * This class provides common functionalities for other classes.
+ * This class provides common functionalities for other classes which require login credentials.
+ * 
+ * @author daisy
  */
 
 package common;

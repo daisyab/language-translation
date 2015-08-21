@@ -1,5 +1,5 @@
 /**
- * This class provides common functionalities for other classes.
+ * This class provides common functionalities for other classes which do not require login credentials.
  * 
  * @author daisy
  */
