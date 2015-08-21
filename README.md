@@ -95,4 +95,4 @@ In eclipse,
 
 Follow the installation instructions from the [MACC Installation Guide](https://github.com/Nerdylicious/app-web-server/blob/master/docs/Installation%20Guide.md) to get a copy of the code on your local machine.
 
-Run each test as a JUnit/TestNG Test.
+Run Main.java found in src/utilities to run all test cases.
