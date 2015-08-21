@@ -28,6 +28,12 @@
 	    </classes>	   
 	</test>
 	
+	<test name="Database">
+	    <classes>
+	        <class name="database_tests.DBTests"/>
+	    </classes>	   
+	</test>
+	
 	<test name="ChangePass">
 	    <classes> 
 		    <class name="home_page_features.ChangePassword"/>
